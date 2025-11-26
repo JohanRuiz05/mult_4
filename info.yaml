@@ -41,7 +41,7 @@ pinout:
   uo[4]: "pp[4]"
   uo[5]: "pp[5]"
   uo[6]: "pp[6]"
-  uo[7]: "pp[7]"
+  uo[7]: "done"
 
   # Bidirectional pins
   uio[0]: "A[0]"
