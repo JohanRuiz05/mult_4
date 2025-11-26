@@ -49,7 +49,7 @@ module Mult_4 (clk,
  input rst;
  input [7:0] A;
  input [3:0] B;
- output [7:0] pp;
+    output [6:0] pp;
 
  wire _020_;
  wire _021_;
@@ -1241,6 +1241,6 @@ module Mult_4 (clk,
     .X(pp[5]));
  sky130_fd_sc_hd__clkbuf_4 output22 (.A(net22),
     .X(pp[6]));
- sky130_fd_sc_hd__buf_2 output23 (.A(net23),
-    .X(pp[7]));
+ //sky130_fd_sc_hd__buf_2 output23 (.A(net23),
+    //.X(pp[7]));
 endmodule
