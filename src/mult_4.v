@@ -26,7 +26,6 @@ module tt_um_mult_4 (
    );
   
   // All output pins must be assigned. If not used, assign to 0
-  assign uio_in[7:1] = 0;
   assign uio_out[7:2] = 0;
   assign uio_out[0] = 0;
   assign uio_oe  = 0;
