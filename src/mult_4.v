@@ -32,7 +32,7 @@ module tt_um_mult_4 (
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, uio_oe[7:0],uio_in[7:1], uio_out[7:2], uio_out[0] 1'b0};
+    wire _unused = &{ena, uio_oe[7:0],uio_in[7:1], uio_out[7:2], uio_out[0], 1'b0};
 
 endmodule
 
