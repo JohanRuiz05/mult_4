@@ -15,6 +15,16 @@ module tt_um_mult_4 (
   /* verilator lint_on SYNCASYNCNET */
   always @(negedge clk) resetn <= rst_n;
 
+      mult_4 mult_4(
+      .clk(clk),
+      .rst(resetn),
+      .init(uio_in[0]),
+      .A(ui_in[3:0]),
+      .B(ui_in[7:4]),
+      .pp(uo_out[7:0]),
+      .done(uio_out[1])
+   );
+  
   // All output pins must be assigned. If not used, assign to 0
   assign uio_in[7:1] = 0;
   assign uio_out[7:2] = 0;
@@ -24,18 +34,8 @@ module tt_um_mult_4 (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, uio_oe[7:0],uio_in[7:1], uio_out[7:2], uio_out[0] 1'b0};
 
-  mult_4 mult_4(
-      .clk(clk),
-      .rst(resetn),
-      .init(uio_in[0]),
-      .A(ui_in[3:0]),
-      .B(ui_in[7:4]),
-      .pp(uo_out[7:0]),
-      .done(uio_out[1])
-   );
-
 endmodule
-  
+
   module mult_4 (clk , rst , init , A , B , pp , done);
   
   input clk;
